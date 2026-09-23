@@ -1,52 +1,202 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LT</title>
+
 <style>
-*{box-sizing:border-box}
-body{
-  margin:0; min-height:100vh; display:grid; place-items:center;
-  font-family:Arial,sans-serif; background:#0b0d12; color:#fff;
+*{
+  box-sizing:border-box;
 }
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Arial,sans-serif;
+  background:#0b0d12;
+  color:#fff;
+}
+
+/* CONTENEUR PRINCIPAL */
+.container{
+  width:min(460px,calc(100% - 32px));
+  margin:0 auto;
+  padding:70px 0;
+}
+
+/* CARTES */
 .card{
-  width:min(460px,calc(100% - 32px)); padding:36px;
-  text-align:center; background:#12151c;
-  border:1px solid #292e3a; border-radius:22px;
+  padding:36px;
+  text-align:center;
+  background:#12151c;
+  border:1px solid #292e3a;
+  border-radius:22px;
   box-shadow:0 20px 70px rgba(0,0,0,.45);
 }
-h1{margin:0 0 8px;font-size:38px}
-p{margin:0 0 28px;color:#aeb5c2}
-.buttons{display:grid;gap:12px}
-a{
-  display:block;padding:15px 18px;border-radius:12px;
-  text-decoration:none;font-weight:700;transition:.15s;
+
+h1{
+  margin:0 0 8px;
+  font-size:38px;
 }
-a:hover{transform:translateY(-2px)}
-.site{background:#fff;color:#0b0d12}
-.download{background:#242a35;color:#fff;border:1px solid #343b49}
-small{display:block;margin-top:20px;color:#707887}
+
+p{
+  margin:0 0 28px;
+  color:#aeb5c2;
+}
+
+.buttons{
+  display:grid;
+  gap:12px;
+}
+
+a{
+  display:block;
+  padding:15px 18px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:700;
+  transition:.15s;
+}
+
+a:hover{
+  transform:translateY(-2px);
+}
+
+.site{
+  background:#fff;
+  color:#0b0d12;
+}
+
+.download{
+  background:#242a35;
+  color:#fff;
+  border:1px solid #343b49;
+}
+
+small{
+  display:block;
+  margin-top:20px;
+  color:#707887;
+}
+
+/* SECTION TUTO */
+.tuto{
+  margin-top:80px;
+  padding:32px;
+  text-align:center;
+  background:#12151c;
+  border:1px solid #292e3a;
+  border-radius:22px;
+  box-shadow:0 20px 70px rgba(0,0,0,.35);
+}
+
+.tuto h2{
+  margin:0 0 10px;
+  font-size:28px;
+}
+
+.tuto p{
+  margin-bottom:24px;
+  color:#aeb5c2;
+}
+
+.tuto-buttons{
+  display:grid;
+  gap:12px;
+}
+
+.tuto-link{
+  background:#242a35;
+  color:#fff;
+  border:1px solid #343b49;
+}
+
+.youtube{
+  background:#ff0000;
+  color:#fff;
+  border:1px solid #ff3333;
+}
 </style>
 </head>
+
 <body>
-<main class="card">
-  <h1>LT</h1>
-  <p>Accède au site ou télécharge LT.</p>
 
-  <div class="buttons">
-    <!-- REMPLACE TON_URL_ICI par l'URL de ton autre site -->
-    <a class="site" href="https://openlua.cloud" target="_blank" rel="noopener">
-      🌐 Accéder au site
-    </a>
+<div class="container">
 
-    <!-- Le fichier lt.exe doit être dans le même dossier que cette page -->
-    <a class="download" href="./lt.exe" download="lt.exe">
-      📥 Télécharger lt.exe
-    </a>
-  </div>
+  <!-- PAGE PRINCIPALE -->
+  <main class="card">
 
-  <small>lt.exe</small>
-</main>
+    <h1>LT</h1>
+
+    <p>Accède au site ou télécharge LT.</p>
+
+    <div class="buttons">
+
+      <!-- TON AUTRE SITE -->
+      <a class="site"
+         href="https://openlua.cloud"
+         target="_blank"
+         rel="noopener">
+        🌐 Accéder au site
+      </a>
+
+      <!-- lt.exe doit être dans le même dossier que index.html -->
+      <a class="download"
+         href="./lt.exe"
+         download="lt.exe">
+        📥 Télécharger lt.exe
+      </a>
+
+    </div>
+
+    <small>lt.exe</small>
+
+  </main>
+
+
+  <!-- SECTION TUTO -->
+  <section class="tuto">
+
+    <h2>📚 Tutoriels</h2>
+
+    <p>
+      Besoin d'aide pour utiliser LT ?
+    </p>
+
+    <div class="tuto-buttons">
+
+      <!-- TUTO ÉCRIT -->
+      <a class="tuto-link"
+         href="./tuto.html">
+        📖 Tutoriel écrit
+      </a>
+
+      <!--
+        TUTO YOUTUBE
+
+        REMPLACE LE LIEN CI-DESSOUS PAR TON LIEN YOUTUBE
+        Exemple :
+        https://www.youtube.com/watch?v=XXXXXXXXXXX
+      -->
+      <a class="youtube"
+         href="https://www.youtube.com/"
+         target="_blank"
+         rel="noopener">
+        ▶️ Tutoriel YouTube
+      </a>
+
+    </div>
+
+  </section>
+
+</div>
+
 </body>
 </html>
+```
